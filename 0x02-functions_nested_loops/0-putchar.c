@@ -1,19 +1,20 @@
 #include "main.h"
- /**
-  * main - prints _putchar followed by a new line
-  *
-  * Return: Always 0.
-  **/
+
+/**
+ * main - Prints _putchar followed by a newline
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	char*sh = "_putchar";
-	while(*sh)
+	int str[] = {95, 112, 117, 116, 99, 104, 97, 114};
+	int count, sz;
+
+	sz = sizeof(str) / sizeof(int);
+	for (count = 0; count < sz; count++)
 	{
-		_putchar(*sh);
-		sh++;
+		_putchar(str[count]);
 	}
 	_putchar('\n');
-		
-	return (0)
+	return (0);
 }
-

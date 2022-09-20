@@ -9,11 +9,7 @@ int _putchar(char c);
 int _isupper(int c);
 int _isdigit(int c);
 int mul(int a, int b);
-<<<<<<< HEAD
 void print_numbers(void);
-=======
-void print_numbers (void);
->>>>>>> b857094e9002ba27a2247c21f16a88c6e1aa10f1
 void print_most_numbers(void);
 void more_numbers(void);
 void print_line(int n);

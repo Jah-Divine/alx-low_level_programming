@@ -1,25 +1,22 @@
 #include "main.h"
 /**
- *  * rot13 - encodes a key into rot13
- *   @s: string to encode
- *   Return: address of s
+ * _strncpy - copies a string
+ * @dest: destination
+ * @src: source
+ * @n: amount of bytes from src
+ * Return: the pointer to dest
  */
-char *rot13(char *s)
-{
-	int i, j;
-	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	for (i = 0; *(s + i); i++)
-	{
-		for (j = 0; j < 52; j++)
-		{
-			if (a[j] == *(s + i))
-			{
-				*(s + i) = b[j];
-				break;
-			}
-		}
-	}
-	return (s);
+char *_strncpy(char *dest, char *src, int n)
+{
+	int i;
+
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[i] = src[i];
+	for ( ; i < n; i++)
+		dest[i] = '\0';
+
+	return (dest);
+
 }
+

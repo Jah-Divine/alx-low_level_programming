@@ -1,35 +1,21 @@
 #include "main.h"
-
 /**
- *  print_number - prints an integer.
- *   @n: input integer.
- *   Return: no return.
- */
-void print_number(int n)
+ * _strcmp - compares two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: 0 if s1 == s2, otherwise, another number.
+ */ 
+
+int _strcmp(char *s1, char *s2)
 {
-	unsigned int m, d, count;
+	int i = 0, op = 0;
 
-	if (n < 0)
-	{
-		_putchar(45);
-		m = n * -1;
-	}
-	else
-	{
-		m = n;
-	}
-	d = m;
-	count = 1;
-
-	while (d > 9)
-	{
-		d /= 10;
-		count *= 10;
-	}
-
-	for (; count >= 1; count /= 10)
-	{
-		_putchar(((m / count) % 10) + 48);
-	}
+	while (op == 0)
+    {
+               if ((*(s1 + i) == '\0') && (*(s2 + i) == '\0'))
+		break;
+	op = *(s1 + i) - *(s2 + i);
+	i++;
+    }
+        return (op);
 }
-

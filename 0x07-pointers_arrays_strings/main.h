@@ -1,7 +1,7 @@
 #ifndef MAIN_H_
 #define MAIN_H_
-
 #include <stdio.h>
+
 int _putchar(char c);/*_putchar*/
 char *_memset(char *s, char b, unsigned int n);/*prototype function that fills memory with a constant byte.*/
 char *_memcpy(char *dest, char *src, unsigned int n);/*prototype function that copies memory area.*/
